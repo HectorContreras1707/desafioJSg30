@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="./dev_files/login.css">
+    <title>Bienvenido a DEV Community</title>
+</head>
+<body>
+    <!-- Elemento para reproducción de audio -->
+    <audio class="audio-para-habla" src=""></audio>
+    
+    <!-- Contenedor para el tooltip del traductor -->
+    <div class="tooltip-traduccion-mtz oculto-traductor">
+        <!-- Encabezado del tooltip -->
+        <div class="encabezado">
+            <div class="controles-encabezado">
+                Traductor
+            </div>
+            <div class="controles-encabezado">
+                <span class="soporte"></span>
+            </div>
+            <div class="controles-encabezado">
+                <span class="configuraciones"></span>
+            </div>
+        </div>
+        <!-- Contenido traducido -->
+        <div class="texto-traducido">
+            <div class="palabras"></div>
+            <div class="oraciones"></div>
+        </div>
+    </div>
+
+    <!-- Botón para activar el traductor -->
+    <span class="boton-traduccion-mtz oculto-traductor" style="top: 257.390625px; left: 715.671875px;"></span>
+
+    <!-- Sección principal del formulario de login -->
+    <section class="cuerpo-login">
+        <!-- Título e información introductoria -->
+        <div class="titulo-login">
+            <a href="https://dev-to-seven.vercel.app/index.html"><img src="./dev_files/dev.png" alt="logo" class="logo-login"></a>
+            <img src="./dev_files/dev.png" alt="logo" class="logo-login">
+            <h2 style="margin-bottom: 9px; font-size: 30px">
+                Únete a la Comunidad DEV
+            </h2>
+            <p style="color: #404040; margin-top: 0; padding: 0">
+                La Comunidad DEV es hogar de 1,237,804 desarrolladores increíbles
+            </p>
+        </div>
+
+        <!-- Botones de inicio de sesión con diversas plataformas -->
+        <div class="botones-login">
+            <button>
+                <i class="fa-marcas fa-apple" aria-hidden="true"></i><span class="texto-boton"> Continuar con Apple</span>
+            </button>
+            <button>
+                <img src="./dev_files/forem.jpg" style="width: 20; height: 20px" alt="forem">
+                <span class="texto-boton"> Continuar con Github</span>
+            </button>
+            <button>
+                <i class="fa-marcas fa-github" aria-hidden="true"></i><span class="texto-boton"> Continuar con Github</span>
+            </button>
+            <button>
+                <i class="fa-marcas fa-twitter" aria-hidden="true"></i><span class="texto-boton"> Continuar con Twitter</span>
+            </button>
+        </div>
+
+        <!-- Sección de formulario de inicio de sesión -->
+        <div class="lineas-centradas">O</div>
+        <hr>
+        <section class="formulario-login">
+            <!-- Formulario de inicio de sesión -->
+            <form action="https://dev-to-seven.vercel.app/index.html">
+                <p>Email</p>
+                <input type="email" id="email" class="login-email login-input">
+                <p>Contraseña</p>
+                <input type="password" id="pwd" class="contrasena-login login-input">
+                <!-- Opciones de recordar usuario y enlace de recuperación de contraseña -->
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">Recuérdame</label>
+                    </div>
+                    <p>¿Olvidaste la contraseña?</p>
+                </div>
+                <!-- Botón de envío del formulario -->
+                <input type="submit" value="Iniciar sesión" onclick="verificar-datos()" class="boton-formulario">
+            </form>
+
+            <!-- Mensaje y enlace a políticas de privacidad -->
+            <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+                <p style="text-align: center; font-size: 14px; width: 70%">
+                    <i>
+                        Al iniciar sesión, aceptas nuestras
+                        <span style="color: #3b49df">
+                            políticas de privacidad, términos de uso y código de conducta.</span></i>
+                </p>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="privacidad-terminos">
+                <hr>
+            </div>
+
+            <!-- Enlace de registro para nuevos usuarios -->
+            <div style="padding-bottom: 50px">
+                <p>
+                    ¿Eres nuevo en la Comunidad DEV?
+                    <a href="https://dev-to-seven.vercel.app/views/registro.html" style="text-decoration: none; color: #3b49df">Crear cuenta</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Inclusión del script necesario -->
+        <script src="./dev_files/acd114ba49.js" crossorigin="anonymous"></script>

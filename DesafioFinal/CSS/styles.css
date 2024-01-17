@@ -1,0 +1,281 @@
+* {
+  font-family: "open sans";
+}
+
+#logo {
+  margin-left: 10%;
+}
+
+body {
+  background-color: rgb(233, 232, 232);
+}
+
+/*header*/
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.header .login-button {
+  padding: 0.5rem;
+  overflow: normal;
+  background-color: transparent;
+  text-decoration: none;
+}
+.header .create-account {
+  padding: 0.5rem;
+  overflow: normal;
+  background-color: transparent;
+  border: 2px solid blue;
+  text-decoration: none;
+}
+.header .login-button:hover {
+  background-color: rgb(151, 189, 246);
+  color: blue;
+  text-decoration: underline;
+}
+.header .create-account:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+
+/*_______________*/
+.caja-principal {
+  border: 2px solid rgb(231, 228, 228);
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* lado izquierdo */
+.lado-izquierdo {
+  border: 2px solid rgb(231, 228, 228);
+  flex-grow: 1;
+}
+.lado-izquierdo .create-account-iz {
+  background-color: transparent;
+  border: 2px solid blue;
+  text-decoration: none;
+  margin: 10 px;
+  width: 180px;
+  text-align: center;
+}
+.lado-izquierdo .button-iz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lado-izquierdo .login-button-iz {
+  text-decoration: none;
+  margin: 0 auto;
+  border: 2px solid white;
+  margin: 10 px;
+  width: 180px;
+  text-align: center;
+}
+.lado-izquierdo .create-account-iz:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+.lado-izquierdo .login-button-iz:hover {
+  background-color: gray;
+  text-decoration: underline;
+  text-align: center;
+}
+.lado-izquierdo div {
+  margin: 10px;
+}
+.lado-izquierdo .check {
+  background-color: transparent;
+  border: 1px solid blue;
+  text-decoration: none;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 3px;
+}
+.lado-izquierdo .box-white {
+  background-color: white;
+  border: 2px solid rgb(231, 228, 228);
+  padding: 10px;
+}
+.lado-izquierdo .box-popular {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgb(233, 232, 232);
+  flex-direction: column;
+  overflow: auto;
+}
+.lado-izquierdo .box-popular a {
+  text-decoration: none;
+  color: black;
+}
+.lado-izquierdo ul > li:hover {
+  background-color: gray;
+  text-decoration: underline;
+}
+.lado-izquierdo .box-popular > a:hover {
+  background-color: gray;
+  text-decoration: underline;
+}
+.lado-izquierdo .check:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: underline;
+}
+.lado-izquierdo ul {
+  list-style: none;
+}
+.lado-izquierdo ul li > a {
+  text-decoration: none;
+  color: black;
+}
+
+/*________________*/
+/* central */
+main {
+  border: 2px solid rgb(231, 228, 228);
+  flex-grow: 4;
+}
+
+.central {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.central .imgc {
+  width: 100%;
+  max-width: 450px;
+}
+.central .bc > a {
+  height: 50px;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+.central .bc > a:hover {
+  background-color: white;
+  color: blue;
+}
+.central .textcc {
+  margin: 10px;
+}
+.central .textcc a {
+  text-decoration: none;
+  color: black;
+}
+.central .textcc a:hover {
+  color: blue;
+}
+.central .box-white {
+  background-color: white;
+  border: 2px solid rgb(231, 228, 228);
+  padding: 20px;
+  border-radius: 5px;
+}
+.central .textf {
+  margin: 10px;
+}
+
+/*_____________*/
+.lado-derecho {
+  border: 2px solid rgb(231, 228, 228);
+  flex-grow: 2;
+}
+.lado-derecho p > a {
+  text-decoration: none;
+  color: black;
+}
+.lado-derecho h3 > a {
+  text-decoration: none;
+  color: black;
+}
+.lado-derecho p > a:hover {
+  color: blue;
+}
+.lado-derecho h3 > a:hover {
+  color: blue;
+}
+
+aside .box-white {
+  border: solid 1px #eee;
+  text-decoration: none;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .lado-izquierdo {
+    visibility: hidden;
+  }
+  .caja-principal {
+    width: 100%;
+  }
+  .lado-izquierdo {
+    position: fixed;
+  }
+  .lado-derecho {
+    position: fixed;
+    visibility: hidden;
+  }
+  .login-button {
+    visibility: hidden;
+  }
+  .create-account {
+    margin-right: 150px;
+  }
+}
+@media (max-width: 450px) {
+  .lado-izquierdo {
+    visibility: hidden;
+  }
+  .caja-principal {
+    width: 100%;
+  }
+  .lado-izquierdo {
+    position: fixed;
+  }
+  .lado-derecho {
+    visibility: hidden;
+  }
+  .login-button {
+    visibility: hidden;
+  }
+  .create-account {
+    margin-right: 50px;
+  }
+}
+.box-white.links-boxs2, .box-white.hipervinculos, .box-white.boxprimera {
+  border: solid 1px #eee;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 400px;
+  padding: 8px;
+}
+.box-white.links-boxs2 a, .box-white.hipervinculos a, .box-white.boxprimera a {
+  text-decoration: none;
+  color: #333;
+}
+.box-white.links-boxs2 a:hover, .box-white.hipervinculos a:hover, .box-white.boxprimera a:hover {
+  color: blue;
+}
+
+.box-white.hipervinculos {
+  background-color: transparent;
+  max-width: 400px;
+}
+.box-white.hipervinculos a {
+  display: block;
+  padding: 10px;
+}
+
+.box-white.links-boxs2 {
+  margin: 10px 0;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>DEV Community</title>
+    <script src="../ProyectoMaquetacion-main/JAVASCRIPT/main.js" defer></script>
+  </head>
+  <body>
+    <main class="central">
+      <!-- ... Otro contenido ... -->
+  
+      <!-- Formulario de inicio de sesión -->
+      <div class="formulario-login box-white">
+          <h3>Iniciar Sesión</h3>
+          <form id="loginForm" onsubmit="return validarInicioSesion()">
+              <label for="username">Nombre de usuario:</label>
+              <input type="text" id="username" name="username" required>
+  
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" required>
+  
+              <input type="submit" value="Iniciar Sesión" onclick="redirectToIndex()">
+          </form>
+      </div>
+  </main>
+  
+    <div class="bc">
+      <button onclick="filterByRelevant()">Relevant</button>
+      <button onclick="filterByLatest()">Latest</button>
+      <button onclick="filterByTop()">Top</button>
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button onclick="searchPosts()">Search</button>
+    </div>
+    <div id="post-container">
+      <!-- Aquí se cargarán dinámicamente los posts -->
+    </div>
+    
+    <header class="header">
+      <div id="logo">
+        <img src="./imgs/dev.png" alt="logo" height="37px"/>
+      </div>
+
+      <nav class="link">
+        <a class="login-button" href="#">Login</a>
+        <a class="create-account" href="#">Create Account</a>
+      </nav>
+    </header>
+  
+    <div class="caja-principal">
+        <aside class="lado-izquierdo">
+            <div class="box-white">
+              <h3> <b>
+                DEV Community is a <br />
+                community of <br />
+                1,147,415 amazing <br />
+                developers </b>
+              </h3>
+              <p class=>
+                We're a place where coders <br />
+                share, stay up-to-date and <br />
+                grow their careers.
+              </p>
+              <div class="button-iz">
+                <a class="create-account-iz" href="#">Create Account</a>
+                <a class="login-button-iz" href="#">Login</a>
+            </div>
+
+            </div>
+            <div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Reading List</a></li>
+                <li><a href="#">Podcasts</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forem Shop</a></li>
+                <li><a href="#">Advertise on DEV</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Software comparasions</a></li>
+              </ul>
+            </div>
+            <div>
+              <p><b>Other</b></p>
+              <ul>
+                <li><a href="#">Code of Conduct</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+              </ul>
+            </div>
+            <div>
+              <p><b>Popular Tags</b></p>
+              <div class="box-popular">
+                <a href="#">#webdev</a>
+                <a href="#">#javascript</a>
+                <a href="#">#beginners</a>
+                <a href="#">#programming</a>
+                <a href="#">#tutorial</a>
+                <a href="#">#react</a>
+                <a href="#">#phyton</a>
+                <a href="#">#opensource</a>
+                <a href="#">#discuss</a>
+                <a href="#">#productivity</a>
+                <a href="#">#devops</a>
+                <a href="#">#typescript</a>
+                <a href="#">#aws</a>
+                <a href="#">#news</a>
+                <a href="#">#css</a>
+                <a href="#">#node</a>
+                <a href="#">#career</a>
+                <a href="#">#ai</a>
+                <a href="#">#api</a>
+                <a href="#">#java</a>
+                <a href="#">#testing</a>
+                <a href="#">#codenewbie</a>
+                <a href="#">#android</a>
+                <a href="#">#html</a>
+              </div>
+            </div>
+            <div class="box-white">
+              <small>
+                <p>DEV Community</p>
+              </small>
+              <img src="./imgs/a7vwtniq292l7187bmky.png"alt="Logo DEV Community" height="150px"/>
+              <h3> <b>
+                Want to rep DEV and <br />
+                be comfy at the same <br />
+                time?
+                </b>
+              </h3>
+              <a class="check" href="#">Check out the DEV shop!</a>
+            </div>
+            <div class="box-white">
+              <small>
+                <p>DEV Community</p>
+              </small>
+              <img src="./imgs/DEV green.png" alt="Logo DEV green" height="150px" />
+              <h3>
+                <b>
+                Catapult Your <br />
+                Reach
+                </b>
+              </h3>
+              <small>
+                <p>
+                  Engage with developers via <br />
+                  our in-house ad platform.
+                </p>
+              </small>
+              <a class="check" href="#">Explore Ad Possibilities</a>
+            </div>
+            <div>
+              <small>
+                <p>
+                  <a href="#">DEV Community </a> A constructive and <br />inclusive
+                  social network for software <br />developers. With you every step
+                  of <br />your journey.
+                </p>
+                <p>
+                  Built on <a href="#">Forem — </a>the open source <br />
+                  software that powers DEV and other <br />inclusive communities
+                </p>
+                <p>
+                  Made with love and <a href="#">Ruby on Rails. </a><br />DEV
+                  Community © 2016 - 2023.
+                </p>
+              </small>
+            </div>
+          </aside>
+        <main class="central">
+            <div class="bc">
+              <a href="#">Relevant</a>
+              <a href="#">Lastest</a>
+              <a href="#">Top</a>
+            </div>
+            <div class="textcc box-white">
+              <img
+                class="imgc"
+                src="./imgs/devch1.webp"
+                alt="imagen aleatoria"
+              />
+              <small
+                ><p>
+                  Nombre de usuario <br />
+                  Fecha
+                </p></small
+              >
+              <a href="#"
+                ><h1>
+                  <b>Handling state between multiple processes <br />
+                  with elixir </b>
+                </h1></a
+              >
+            </div>
+            <div class="textf box-white">
+              <small><p>Dev Community</p></small>
+              <img
+                class="imgc"
+                src="./imgs/devch2.png"
+                alt="imagen aleatoria"
+              />
+              <p class="imgc">
+                <b
+                  >Need to stay up-to-date with the most relevant trends in 
+                  software, such as generate AI, cloud computing, and all 
+                  things frontend?</b
+                >
+              </p>
+              <p>
+              <pre>
+   You can do so much more once you <b>create your account.</b> Follow the 
+   devs and topics you care about, and keep up-to-date.
+
+   <a href="https://dev.to/enter?state=new-user"> <b>Start now </b></a>
+              <pre>
+    Happy coding ❤️
+              </pre>
+              </pre>
+              </p>
+            </div>
+          </main>
+    
+          <aside class="lado-derecho">
+            <div class="box-white boxprimera">
+              <h3><a href="https://dev.to/t/discuss">#Conversar</a></h3>
+              <hr>
+              <p>
+                  <a href="https://dev.to/bekahhw/what-repos-would-you-recommend-to-new-contributors-for-hacktoberfest-47no">
+                      ¿Que repositorios recomendaríasa los nuevos contribuyentes del Hacktoberfest?
+                  </a>
+              </p>
+              <hr>
+              <p>
+                  <a href="https://dev.to/opensauced/open-source-abcs-repository-17po">
+                      ABC de código abierto: repositorio
+                  </a>
+              </p>
+              <hr>
+              <p>
+                  <a href="https://dev.to/ben/meme-monday-3olc">
+                      meme lunes
+                  </a>
+              </p>
+              <p>
+                  <a href="https://dev.to/srbhr/react-sees-a-dip-in-downloads-on-npm-whats-going-on-ode">
+                      React ve una caída en las descargas en npm :chart_with_downwards_trend: ¿Que esta sucediendo?
+                  </a>
+              </p>
+              <hr>
+              <p>
+                  <a href="https://dev.to/codenewbieteam/do-tech-generalists-outshine-specialists-4l37">
+                      ¿Los generalistas tecnolólicos eclipsan a los especialistas?
+                  </a>
+              </p>
+            </div>
+            <div class="box-white links-boxs2 ">
+              
+              <a href="https://dev.to/t/watercooler"><h3>#watercooler</h3></a>
+              <hr>
+              <a href="https://dev.to/devteam/caption-this-e7o">Meme Monday</a>
+              <hr>
+              <a href="https://dev.to/devteam/caption-this-e7o">Caption This 🤔💭</a>
+              <hr>
+              <a href="https://dev.to/dumebii/content-is-king-community-is-queen-and-data-is-the-heir-apparent-4o26">👑🤴Content is King; Community is Queen 👸, and Data is the heir apparent 🫅!</a>
+              <hr>
+              <a href="https://dev.to/devteam/music-monday-what-are-you-listening-to-earworm-edition--41p3">Music Monday — What are you listening to? (Earworm Edition 👂🐛)</a>
+              <hr>
+      
+              <a href="https://dev.to/adiatiayu/how-important-is-a-code-of-conduct-in-an-open-source-project-507j">How Important is a Code of Conduct in an Open-Source Project?</a>
+
+            </div>
+            <div class="box-white hipervinculos">
+              <h5>trending guides/resources</h5>
+              
+              <a href="https://dev.to/zvone187/gpt-pilot-a-dev-tool-that-writes-95-of-coding-tasks-dem">GPT Pilot - a dev tool that writes 95% of coding tasks</a>
+              
+              <a href="https://dev.to/devland/8-habits-that-hold-back-your-developer-potential-330b">8 Habits That Hold Back Your Developer Potential</a>
+              
+              <a href="https://dev.to/favourmark05/writing-clean-code-best-practices-and-principles-3amh">Writing Clean Code: Best Practices and Principles</a>
+              
+              <a href="https://dev.to/madza/19-developer-tools-to-improve-your-workflow-2md">19 Developer Tools to Improve Your Workflow ⚡🚀</a>
+              
+              <a href="https://dev.to/pavanbelagatti/python-cheat-sheet-for-data-engineers-and-data-scientists-3emj">Python Cheat Sheet for Data Engineers and Data Scientists!</a>
+              
+              <a href="https://dev.to/kalashin1/bun-the-next-big-thing-in-javascript-jeg">Bun: The Next Big Thing in Javascript</a>
+              
+              <a href="https://dev.to/sebastian_wessel/bun-10-javascript-meets-speed-of-light-4hfn">Bun 1.0 - JavaScript meets speed of light</a>
+              
+              <a href="https://dev.to/documatic/advanced-git-commands-and-workflows-a-comprehensive-guide-for-developers-5865">Advanced Git Commands and Workflows: A Comprehensive Guide for Developers</a>
+              
+              <a href="https://dev.to/artxe2/throw-away-the-script-from-typescript-mn5">Throw away the "Script" from "Type""Script".</a>
+              
+              <a href="https://dev.to/pavanbelagatti/learn-how-to-build-a-langchain-audio-app-with-python-in-just-5-minutes-n4o">Learn How to Build a LangChain Audio App with Python in Just 5 Minutes!</a>
+              
+              <a href="https://dev.to/jacktt/creating-dynamic-readmemd-file-388o">Creating Dynamic README.md File</a>
+              
+              <a href="https://dev.to/ppiova/advanced-data-analysis-in-chatgpt-replaces-code-interpreter-3lil">Advanced Data Analysis in ChatGPT Replaces Code Interpreter</a>
+              
+              <a href="https://dev.to/ronakmunjapara/30-best-free-ai-tools-online-for-your-business-or-personal-use-5e7o">30 Best Free AI Tools Online for Your Business or Personal Use</a>
+              
+              <a href="https://dev.to/codewithshahan/can-self-taught-programmers-get-jobs-4f4d">Can self-taught programmers get jobs?</a>
+              
+              <a href="How I approach and structure Enterprise frontend applications after 4 years of using Next.js">How I approach and structure Enterprise frontend applications after 4 years of using Next.js</a>gitack-developer-should-master-33e9">4 Open-Source Technologies Every True Full-Stack Developer Should Master</a>
+              
+              <a href="https://dev.to/godot/unity-new-pricing-in-2024-is-crazy-3hnn">Unity New Pricing in 2024 is Absurd</a>
+              
+              <a href="https://dev.to/rigdev/introducing-rigdev-an-open-source-application-platform-for-kubernetes-1dge">Introducing Rig.dev: An open-source application platform for Kubernetes</a>
+              
+
+
+
+            </div>
+          </aside>
+    </div>
+</body>
+</html>

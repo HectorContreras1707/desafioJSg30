@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <!-- Sección de formulario de inicio de sesión -->
+    <div class="lineas-centradas">O</div>
+    <hr>
+    <section class="formulario-login">
+        <!-- Formulario de inicio de sesión -->
+        <form action="https://dev-to-seven.vercel.app/index.html">
+            <p>Email</p>
+            <input type="email" id="email" class="login-email login-input">
+            <p>Contraseña</p>
+            <input type="password" id="pwd" class="contrasena-login login-input">
+            <!-- Opciones de recordar usuario y enlace de recuperación de contraseña -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Recuérdame</label>
+                </div>
+                <p>¿Olvidaste la contraseña?</p>
+            </div>
+            <!-- Botón de envío del formulario -->
+            <input type="submit" value="Iniciar sesión" onclick="verificar-datos()" class="boton-formulario">
+        </form>
+
+        <!-- Mensaje y enlace a políticas de privacidad -->
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+            <p style="text-align: center; font-size: 14px; width: 70%">
+                <i>
+                    Al iniciar sesión, aceptas nuestras
+                    <span style="color: #3b49df">
+                        políticas de privacidad, términos de uso y código de conducta.</span></i>
+            </p>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="privacidad-terminos">
+            <hr>
+        </div>
+
+        <!-- Enlace de registro para nuevos usuarios -->
+        <div style="padding-bottom: 50px">
+            <p>
+                ¿Eres nuevo en la Comunidad DEV?
+                <a href="https://dev-to-seven.vercel.app/views/registro.html" style="text-decoration: none; color: #3b49df">Crear cuenta</a>.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
